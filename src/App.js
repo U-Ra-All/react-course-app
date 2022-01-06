@@ -1,8 +1,10 @@
+import CostItem from "./components/CostItem";
+
 function App() {
   return (
     <div>
       <h1>Начнём изучение React!</h1>
-      <p>Hey there!</p>
+      <CostItem></CostItem>
     </div>
   );
 }
