@@ -1,10 +1,12 @@
+import "./CostItem.css";
+
 function CostItem() {
   return (
-    <div>
+    <div className="cost-item">
       <div>март 2021 12</div>
-      <div>
+      <div className="cost-item__description">
         <h2>Холодильник</h2>
-        <div>$999.99</div>
+        <div className="cost-item__price">$999.99</div>
       </div>
     </div>
   );
