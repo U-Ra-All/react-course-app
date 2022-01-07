@@ -13,7 +13,7 @@ function App() {
       amount: 1254.72,
     },
     {
-      date: new Date(2021, 4, 1),
+      date: new Date(2021, 3, 1),
       description: "Джинсы",
       amount: 49.99,
     },
@@ -26,17 +26,17 @@ function App() {
         date={costs[0].date}
         description={costs[0].description}
         amount={costs[0].amount}
-      ></CostItem>
+      />
       <CostItem
         date={costs[1].date}
         description={costs[1].description}
         amount={costs[1].amount}
-      ></CostItem>
+      />
       <CostItem
         date={costs[2].date}
         description={costs[2].description}
         amount={costs[2].amount}
-      ></CostItem>
+      />
     </div>
   );
 }
