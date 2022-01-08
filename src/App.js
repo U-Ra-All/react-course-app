@@ -1,5 +1,5 @@
 // import React from "react";
-import Costs from "./components/Costs";
+import Costs from "./components/Costs/Costs";
 
 function App() {
   const costs = [
