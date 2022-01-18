@@ -15,18 +15,24 @@ const Costs = (props) => {
     return cost.date.getFullYear().toString() === selectedYear;
   });
 
+  let costsContent = <p>В Этом Году Расходов Нет</p>;
+
+  if (filteredCosts.length > 0) {
+    costsContent = filteredCosts.map((cost) => (
+      <CostItem
+        key={cost.id}
+        date={cost.date}
+        description={cost.description}
+        amount={cost.amount}
+      />
+    ));
+  }
+
   return (
     <div>
       <Card className="costs">
         <CostsFilter year={selectedYear} onChangeYear={yearChangeHandler} />
-        {filteredCosts.map((cost) => (
-          <CostItem
-            key={cost.id}
-            date={cost.date}
-            description={cost.description}
-            amount={cost.amount}
-          />
-        ))}
+        {costsContent}
       </Card>
     </div>
   );
